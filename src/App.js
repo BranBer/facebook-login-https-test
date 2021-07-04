@@ -1,10 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import FacebookLogin from 'react-facebook-login'
+
+const responseFacebook = (response) => {
+  console.log(response)
+}
 
 function App() {
   return (
     <div className="App">
-        <div className="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+      <FacebookLogin
+        appId="489009555544014"
+        autoLoad={true}
+        fields="name,email,picture"
+        callback={responseFacebook} />
     </div>
   );
 }
