@@ -14,13 +14,13 @@ function App() {
   return (
     <div className="App">
       <FacebookLogin
-        appId={process.env.FACEBOOK_CLIENT_ID}
+        appId={process.env.REACT_APP_FACEBOOK_CLIENT_ID}
         autoLoad={true}
         fields="name,firstName,lastName,location,email,picture"
         callback={responseFacebook} />
 
       <GoogleLogin 
-        clientId={process.env.GOOGLE_CLIENT_ID}
+        clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
         buttonText="Login with Google"
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
