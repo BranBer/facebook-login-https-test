@@ -22,6 +22,7 @@ function App() {
       <GoogleLogin 
         clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
         buttonText="Login with Google"
+        scope="https://www.googleapis.com/auth/userinfo.profile"
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
         cookiePolicy={'single_host_origin'}
